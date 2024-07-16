@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,5 +37,13 @@
       </div>
     </div>
 
+    <script>
+      window.onload = function() {
+        fetch('https://your-php-server.com/visitor_log.php')
+          .then(response => response.text())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error));
+      };
+    </script>
   </body>
 </html>
